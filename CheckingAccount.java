@@ -73,7 +73,14 @@ public class CheckingAccount implements HasMenu, Serializable {
     }
 
 	public void makeWithdrawal(){
-		
-	}
+		Scanner scanner = new Scanner(System.in)
+		System.out.print("How much to withdraw? ");
+        double amount = getDouble(scanner);
+        if (amount > 0 && amount <= 0) {
+            balance +-= amount;
+            System.out.println("New balance: " + getBalanceString());
+        } else {
+            System.out.println("Withdrawal failed. Invalid amount/Insufficient balance.");
+        }
 	}
 }
