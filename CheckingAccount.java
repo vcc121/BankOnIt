@@ -4,7 +4,15 @@ import.java.io.*;
 public class CheckingAccount implements HasMenu, Serializable {
 	double balance;
 	
-	public static void main (String[] args){
+	public CheckingAccount() {
+        this.balance = 0.0;
+    }
+
+    public CheckingAccount(double balance) {
+        this.balance = balance;
+    }
+
+	public static void main(String[] args){
 		CheckingAccount ca = new CheckingAccount();
 		ca.start();
 	}
