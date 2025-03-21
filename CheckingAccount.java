@@ -37,7 +37,7 @@ public class CheckingAccount implements HasMenu, Serializable {
 				this.makeWithdrawal();
 			}
 			else {
-				System.out.println("Invalid input.")
+				System.out.println("Invalid input.");
 			}
 		}
 	}
@@ -62,7 +62,7 @@ public class CheckingAccount implements HasMenu, Serializable {
 			result = Double.parseDouble(sResult);
 		}
 		catch(Exception e){
-			System.out.println("Not a legal input. Changing to zero.")
+			System.out.println("Not a legal input. Changing to zero.");
 			result = 0d;
 		}
 		return result;
