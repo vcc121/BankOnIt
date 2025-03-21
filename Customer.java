@@ -21,4 +21,50 @@ public class Customer extends User {
         }
     }
 
+    public String menu() {
+        return """
+            Account Menu
+            0) Exit
+            1) Manage Checking Account
+            2) Manage Savings Account
+            3) change PIN
+            Please enter 0-3: 
+            """;
+    }
+
+    public void start() {
+        Scanner scanner = new Scanner(System.in);
+        boolean keepGoing = true;
+        while (keepGoing) {
+            System.out.print(menu());
+            int choice = scanner.nextInt();
+            if (choice == 1) {
+                checking.start();
+            } else if (choice == 2) {
+                savings.start();
+            } else if (choice == 3) {
+                changePin();
+            } else if (choice == 0) {
+                keepGoing = false;
+            } else {
+                System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+
+    public void changePin() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter new PIN: ");
+        this.setPIN(input.nextLine();)
+        System.out.println("PIN changed successfully.");
+    }
+
+    public String getReport(){
+        String report = "User: " + this.getUserName();
+        report += ", Checking: " + this.checking.getBalanceString();
+        report += ", Savings: " + this.savings.getBalanceString();
+
+        return report;
+    }
+
 }
