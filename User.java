@@ -8,17 +8,56 @@ public abstract class User implements HasMenu, Serializable {
     public boolean login(){
         Scanner input = new Scanner(System.in);
         boolean result = false;
-        System.out.print("User name: ")
+        System.out.print("User name: ");
         String userNameIn = input.nextLine();
 
         if (userNameIn.equals(this.userName)){
-            System.out.print("PIN: ")
+            System.out.print("PIN: ");
             String pinIn = input.nextLine();
 
-            if (pinIn.equals(this.userName)){
-
+            if (pinIn.equals(this.PIN)){
+                result = true;
+                System.out.println("Login successful!");
+            }
+            else {
+                System.out.println("Login failed. Incorrect PIN.");
             }
         }
+        else {
+            System.out.println("Login failed. User name not found.");
+        }
+    return result;
     }
+    
+    public boolean login(String userNameIn, String pinIn){
+        boolean result = false;
+        if (userNameIn.equals(this.userName)){
+            if (pinIn.equals(this.PIN)){
+                result = true;
+            }
+        }
+        return result;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setPIN(String PIN) {
+        if (pin.matches("^\\d{4}$")){
+            this.PIN = PIN;
+        }
+        else {
+            System.out.println("PIN must be 4 numeric digits");
+            System.out.println("Setting PIN to '0000' ");
+            this.PIN = "0000";
+        }
+    }
+
+    public String getPIN() {
+        return this.PIN;
+    }
+
+    public abstract String getReport();
 
 }
