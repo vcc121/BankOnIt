@@ -1,5 +1,5 @@
-import.java.util.*;
-import.java.io.*;
+import java.util.*;
+import java.io.*;
 
 public abstract class User implements HasMenu, Serializable {
     String userName = "";
@@ -26,7 +26,7 @@ public abstract class User implements HasMenu, Serializable {
         else {
             System.out.println("Login failed. User name not found.");
         }
-    return result;
+        return result;
     }
     
     public boolean login(String userNameIn, String pinIn){
@@ -48,7 +48,7 @@ public abstract class User implements HasMenu, Serializable {
     }
 
     public void setPIN(String PIN) {
-        if (pin.matches("^\\d{4}$")){
+        if (PIN.matches("^\\d{4}$")){
             this.PIN = PIN;
         }
         else {
@@ -63,5 +63,4 @@ public abstract class User implements HasMenu, Serializable {
     }
 
     public abstract String getReport();
-
 }

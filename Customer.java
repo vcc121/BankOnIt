@@ -55,7 +55,7 @@ public class Customer extends User {
     public void changePin() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter new PIN: ");
-        this.setPIN(input.nextLine());
+        this.setPIN(scanner.nextLine());
         System.out.println("PIN changed successfully.");
     }
 
