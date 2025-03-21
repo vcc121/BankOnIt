@@ -56,6 +56,11 @@ public class CheckingAccount implements HasMenu, Serializable {
         }
     }
 
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     public double getBalance() {
         return this.balance;
     }
