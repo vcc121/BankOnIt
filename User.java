@@ -5,6 +5,11 @@ public abstract class User implements HasMenu, Serializable {
     String userName = "";
     String PIN = "";
 
+    public User(String userName, String PIN) {
+    this.userName = userName;
+    this.PIN = PIN;
+}
+
     public boolean login(){
         Scanner input = new Scanner(System.in);
         boolean result = false;
