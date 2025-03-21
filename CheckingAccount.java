@@ -1,5 +1,5 @@
-import.java.util.*;
-import.java.io.*;
+import java.util.*;
+import java.io.*;
 
 public class CheckingAccount implements HasMenu, Serializable {
 	double balance;
@@ -47,15 +47,15 @@ public class CheckingAccount implements HasMenu, Serializable {
     }
 
 	public String getBalanceString(){
-		return String.format("$%.2f", this.balance)
+		return String.format("$%.2f", this.balance);
 	}
 
 	public void checkBalance(){
-		Systme.out.println("Current balance: " + this.getBalance())
+		Systme.out.println("Current balance: " + this.getBalance());
 	}
 
 	private double getDouble(){
-		Scanner input = new Scanner(System.in)
+		Scanner input = new Scanner(System.in);
 		String sResult = input.nextLine();
 		double result = 0d;
 		try {
@@ -69,7 +69,7 @@ public class CheckingAccount implements HasMenu, Serializable {
 	}
 
 	public void makeDeposit(){
-		Scanner scanner = new Scanner(System.in)
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("How much to deposit? ");
         double amount = getDouble(scanner);
         if (amount > 0) {
@@ -81,7 +81,7 @@ public class CheckingAccount implements HasMenu, Serializable {
     }
 
 	public void makeWithdrawal(){
-		Scanner scanner = new Scanner(System.in)
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("How much to withdraw? ");
         double amount = getDouble(scanner);
         if (amount > 0 && amount <= 0) {

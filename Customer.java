@@ -9,4 +9,16 @@ public class Customer extends User {
         this.checking = new CheckingAccount();
         this.savings = new SavingsAccount();
     }
+
+
+    public static void main(String[] args) {
+        Customer customer = new Customer("Alice", "1111");
+        if (customer.login()) {
+            System.out.println("Login Successful");
+            customer.start();
+        } else {
+            System.out.println("Login Failed. Try again.");
+        }
+    }
+
 }
