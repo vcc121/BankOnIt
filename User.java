@@ -39,6 +39,10 @@ public abstract class User implements HasMenu, Serializable {
         return result;
     }
 
+    public void setUserName(String userName){
+        this.userName = userName;
+    }
+
     public String getUserName() {
         return this.userName;
     }
