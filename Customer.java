@@ -6,7 +6,6 @@ public class Customer extends User {
     protected SavingsAccount savings;
 
     public Customer(String userName, String PIN) {
-        super(userName, PIN);
         this.checking = new CheckingAccount();
         this.savings = new SavingsAccount();
     }
