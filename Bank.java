@@ -8,7 +8,7 @@ public class Bank implements HasMenu, Serializable {
     Scanner scanner = new Scanner(System.in);
 
     public class CustomerList extends ArrayList<Customer> {
-        
+
     }
 
     public static void main(String[] args){
@@ -141,7 +141,7 @@ public class Bank implements HasMenu, Serializable {
 
     public void applyInterest() {
         for (Customer customer : customers) {
-            customer.getBalance().calcInterest();
+            customer.savings.calcInterest();
         }
         System.out.println("Interest applied to all savings accounts.");
     }
