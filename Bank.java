@@ -122,7 +122,8 @@ public class Bank implements HasMenu, Serializable {
         for (Customer customer: customers) {
             System.out.println(customer.getReport());
         }
-
+    }
+    
     public void addUser() {
         System.out.print("Enter new customer's name: ");
         String newUserName = scanner.nextLine();
