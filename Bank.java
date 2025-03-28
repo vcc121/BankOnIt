@@ -91,13 +91,13 @@ public class Bank implements HasMenu, Serializable {
     }
 
     public String menu() {
-        System.out.println("Bank Menu");
-        System.out.println("0) Exit system");
-        System.out.println("1) Login as Admin");
-        System.out.println("2) Login as Customer");
-        String result = scanner.nextLine();
-
-        return result;
+        return """
+            Account Menu
+            0) Exit System
+            1) Login as Admin
+            2) Login as Customer
+            Please enter 0-2: 
+            """;
     }
 
     public void adminStart() {
