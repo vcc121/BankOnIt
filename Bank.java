@@ -17,8 +17,8 @@ public class Bank implements HasMenu, Serializable {
 
     public Bank (){
         // Uncomment these to refresh data
-        this.loadSampleCustomers();
-        this.saveCustomers();
+        //this.loadSampleCustomers();
+        //this.saveCustomers();
 
         this.loadCustomers();
         this.start();
