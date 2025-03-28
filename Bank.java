@@ -7,14 +7,18 @@ public class Bank implements HasMenu, Serializable {
     CustomerList customers = new CustomerList();
     Scanner scanner = new Scanner(System.in);
 
+    public class CustomerList extends ArrayList<Customer> {
+        
+    }
+
     public static void main(String[] args){
 		new Bank();
 	}
 
     public Bank (){
         // Uncomment these to refresh data
-        // this.loadSampleCustomers();
-        // this.saveCustomers();
+        this.loadSampleCustomers();
+        this.saveCustomers();
 
         this.loadCustomers();
         this.start();
