@@ -50,7 +50,7 @@ public class Bank implements HasMenu, Serializable {
             customers = (CustomerList) obIn.readObject();
             obIn.close();
             fi.close();
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             System.out.println("No previous customer data found. Loading sample data.");
             loadSampleCustomers();
         }
