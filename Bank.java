@@ -95,4 +95,67 @@ public class Bank implements HasMenu, Serializable {
 
         return result;
     }
+
+    public void adminStart() {
+        boolean keepGoing = true;
+        while (keepGoing) {
+            admin.menu();
+            System.out.print("Action: ");
+            String choice = scanner.nextLine();
+
+            if (choice.equals("1")) {
+                fullCustomerReport();
+            } else if (choice.equals("2")) {
+                addUser();
+            } else if (choice.equals("3")) {
+                applyInterest();
+            } else if (choice.equals("0")) {
+                System.out.println("Exiting admin menu.");
+                keepGoing = false;
+            } else {
+                System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    public void fullCustomerReport() {
+        for (Customer customer: customers) {
+            System.out.println(customer.getReport());
+        }
+
+    public void addUser() {
+        System.out.print("Enter new customer's name: ");
+        String newUserName = scanner.nextLine();
+        System.out.print("Enter PIN: ");
+        String newPIN = scanner.nextLine();
+
+        Customer newCustomer = new Customer(newUserName, newPIN);
+        customers.add(newCustomer);
+        System.out.println("Customer added successfully.");
+    }
+
+    public void applyInterest() {
+        for (Customer customer : customers) {
+            customer.getSavingsAccount().calcInterest();
+        }
+        System.out.println("Interest applied to all savings accounts.");
+    }
+
+    public void start() {
+        boolean keepGoing = true;
+        while (keepGoing) {
+            String choice = menu();
+
+            if (choice.equals("1")) {
+                loginAsAdmin();
+            } else if (choice.equals("2")) {
+                loginAsCustomer();
+            } else if (choice.equals("0")) {
+                System.out.println("Exiting system. Goodbye!");
+                keepGoing = false;
+            } else {
+                System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
 }
