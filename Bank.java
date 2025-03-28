@@ -104,7 +104,6 @@ public class Bank implements HasMenu, Serializable {
         boolean keepGoing = true;
         while (keepGoing) {
             admin.menu();
-            System.out.print("Action: ");
             String choice = scanner.nextLine();
 
             if (choice.equals("1")) {
@@ -149,7 +148,8 @@ public class Bank implements HasMenu, Serializable {
     public void start() {
         boolean keepGoing = true;
         while (keepGoing) {
-            String choice = menu();
+            System.out.print(menu());
+            String choice = scanner.nextLine();
 
             if (choice.equals("1")) {
                 loginAsAdmin();
