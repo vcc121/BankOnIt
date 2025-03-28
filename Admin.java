@@ -8,8 +8,7 @@ public class Admin extends User implements HasMenu, Serializable {
     }
 
     public Admin() {
-        this.userName = "admin";
-        this.PIN = "0000";
+        super("admin","0000")
     }
 
     public String menu() {
@@ -29,6 +28,6 @@ public class Admin extends User implements HasMenu, Serializable {
     }
 
     public String getReport() {
-        return "Admin: " + getUserName() + "\nPIN: " + getPin();
+        return "Admin: " + getUserName() + "\nPIN: " + getPIN();
     }
 }

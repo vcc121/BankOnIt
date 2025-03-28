@@ -137,7 +137,7 @@ public class Bank implements HasMenu, Serializable {
 
     public void applyInterest() {
         for (Customer customer : customers) {
-            customer.getSavingsAccount().calcInterest();
+            customer.getBalance().calcInterest();
         }
         System.out.println("Interest applied to all savings accounts.");
     }
