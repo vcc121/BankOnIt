@@ -148,7 +148,7 @@ public class Bank implements HasMenu, Serializable {
     public void start() {
         boolean keepGoing = true;
         while (keepGoing) {
-            System.out.print(menu());
+            menu();
             String choice = scanner.nextLine();
 
             if (choice.equals("1")) {
