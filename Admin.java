@@ -8,7 +8,7 @@ public class Admin extends User implements HasMenu, Serializable {
     }
 
     public Admin() {
-        super("admin","0000")
+        super("admin","0000");
     }
 
     public String menu() {
