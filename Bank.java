@@ -92,7 +92,7 @@ public class Bank implements HasMenu, Serializable {
 
     public String menu() {
         return """
-            Account Menu
+            Bank Menu
             0) Exit System
             1) Login as Admin
             2) Login as Customer
