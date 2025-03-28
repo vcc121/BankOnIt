@@ -13,7 +13,7 @@ public class Admin extends User implements HasMenu, Serializable {
     }
 
     public String menu() {
-        Scanner scanner = new Scanner(System.in)
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Admin Menu");
         System.out.println("0) Exit this menu");
         System.out.println("1) Full customer report");
